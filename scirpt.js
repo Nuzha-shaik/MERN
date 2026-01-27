@@ -139,3 +139,43 @@ console.log(name);
 console.log(age);
 console.log(city);
 console.log(marks);
+
+
+let arr=[10,20,30,40]
+for (let i in arr){
+    console.log(i,arr[i]);
+}
+var obj={
+    name:"Nuzha",
+    age:20
+};
+for(let i in obj){
+    console.log(i,obj[i]);
+}
+///map=it gives new array its transforms the old array
+let arr=[10,20,30,40,50]
+z=arr.map((i)=>(i*2))
+console.log(z);
+//even numbers--filter
+let arr=[1,2,3,4,5,6]
+e=arr.filter((i)=>(i%2==0))
+console.log(e);
+///reduce
+let arr=[1,2,3,5]
+var total=arr.reduce((sum,i)=>(sum+i),0)
+console.log(total);
+//combining
+let arr = [1, 2, 3, 4, 5, 6];
+
+var y = arr.filter((i) => i % 2 == 0).map((i) => i * 2).reduce((sum, i) => sum + i, 0); 
+
+console.log(y); 
+//terminating operator
+var name="Nuzzha";
+console.log(`My name is ${name}`);
+//for each loop
+let arr=[1,2,3,4,5]
+arr.forEach((value,index)=>{
+    console.log(index,value);
+})
+///call by  function
