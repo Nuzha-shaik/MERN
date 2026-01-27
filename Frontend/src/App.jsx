@@ -1,29 +1,61 @@
-import React from 'react'
-import Navbar from './component/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Service from './pages/Service'
-import Counter from './component/Counter'
-import UseState from './Hooks/UseState'
-import Login from './Auth/Login'
-import {Route,Routes} from 'react-router-dom'
+//functional component
+
+// function App(){
+//   return(
+//     <h1>hello</h1>
+//   )
+// }
+// export default App;
+
+//class component
+// import {Component} from "react";
+
+// class App extends Component{
+//   render(){
+//     return(
+//       <h1>hello class Component</h1>
+//     )
+//   }
+// }
+// export default App;
+
+import Navbar from "./component/Navbar"
+import Contact from "./pages/Contact"
+import Home from "./pages/Home"
+import About from "./pages/about"
+import Service from "./pages/Service"
+import UseState from "./Hooks/UseState"
+import UseEffect from "./Hooks/UseEffect"
+import Login from "./Auth/Login"
+import Signup from "./Auth/Signup"
+import UseEffectApi from "./Hooks/UseEffectApi"
+import {Routes,Route} from "react-router-dom"
+import Hook from "./Hooks/Hook"
+import UseRef from "./Hooks/UseRef"
+
 
 const App = () => {
- 
+  
   return (
     <div>
       
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path='/home' element={<Home name="nuzha"/>}/>
-        <Route path='/about' element={<About message="hey hi..this is Nuzha" re="23691a32A3" email="nuzhashaik382@gmail.com"/>}/>
-        <Route path='/Contact' element={<Contact c="This is Contact"/>}/>
-        <Route path='/Service' element={<Service s="This is muk jnytgvrfw"/>}/>
-        <Route path='/UseState' element={<UseState/>}/>
-        <Route path='/Login' element={<Login/>}/>
+        <Route path="/home" element={<Home name="Nuzha"/>} />  
+        <Route path="/about" element={<About name="am about page" registerNo="23691A32a3" email="nuzhashaika@gmail.com" />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Service" element={<Service />} />
+        <Route path="/useState" element={<UseState />} />
+        <Route path='/useEffect' element={<UseEffect/>}/>
+        <Route path="/login" element={<Login />} />
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/hook' element={<Hook/>}>
+            <Route path='useState' element={<UseState />} />
+            <Route path='useEffect' element={<UseEffect/>}/>
+            <Route path='useeffectapi' element={<UseEffectApi/>}/>
+            <Route path='useRef' element={<UseRef/>}/>
+        </Route>
       </Routes>
-      
     </div>
   )
 }
