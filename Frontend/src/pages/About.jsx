@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
+import Contact from "./Contact";
 
-function About(props) {
+const About = (props) => {
   return (
     <div>
-    <h1>{props.message}</h1>
-    <h1>{props.re}</h1>
-    <h1>{props.email}</h1>
+      <p>Name: {props.name}</p>
+      
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
